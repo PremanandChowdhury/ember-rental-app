@@ -15,5 +15,6 @@ module('Integration | Component | rental', function (hooks) {
     assert.dom('article .detail.type').includesText('Standalone');
     assert.dom('article .detail.location').includesText('Ranchi');
     assert.dom('article .detail.bedrooms').includesText('15');
+    assert.dom('article .image').exists();
   });
 });
