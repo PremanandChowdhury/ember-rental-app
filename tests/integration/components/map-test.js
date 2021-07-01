@@ -22,13 +22,13 @@ module('Integration | Component | map', function (hooks) {
       .hasAttribute('alt', 'Map image at coordinates 37.7797,-122.4184')
       .hasAttribute('src')
       .hasAttribute('width', '150')
-      .hasAttribute('heihgt', '120');
+      .hasAttribute('height', '120');
 
     let { src } = find('.map img');
     let token = encodeURIComponent(ENV.MAPBOX_ACCESS_TOKEN);
 
     assert.ok(
-      src.startsWidth('https://api.mapbox.com/'),
+      src.startsWith('https://api.mapbox.com/'),
       'the src starts with "https://api.mapbox.com/'
     );
 
